@@ -1,0 +1,2 @@
+D:/flutproj/Tugas-Besar/tugas_besar_motion/android/app/.cxx/Debug/2r151x2q/x86_64/CMakeFiles/edit_cache.dir
+D:/flutproj/Tugas-Besar/tugas_besar_motion/android/app/.cxx/Debug/2r151x2q/x86_64/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "616236467109",
+    "project_id": "tugas-besar-motion",
+    "storage_bucket": "tugas-besar-motion.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:616236467109:android:77927cdb15744981911e4c",
+        "android_client_info": {
+          "package_name": "com.example.tugas_besar_motion"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBqasUa2Yh0x0HcnR-wzQkI-7UgsjnBwE4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
