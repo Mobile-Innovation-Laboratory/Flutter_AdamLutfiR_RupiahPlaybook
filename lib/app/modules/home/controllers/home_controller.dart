@@ -1,23 +1,22 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class HomeController extends GetxController {
-  //TODO: Implement HomeController
-
-  final count = 0.obs;
+  RxString uid = "".obs;
+  RxBool isLoading = false.obs;
   @override
   void onInit() {
-    super.onInit();
+    useruid();
   }
 
-  @override
-  void onReady() {
-    super.onReady();
+  Future<void> useruid() async {
+    try {
+      isLoading.value = true;
+      final SharedPreferences prefs = await SharedPreferences.getInstance();
+      uid.value = await prefs.getString('UID')!;
+    } finally {
+      isLoading.value = false;
+    }
   }
-
-  @override
-  void onClose() {
-    super.onClose();
-  }
-
-  void increment() => count.value++;
 }

@@ -15,6 +15,5 @@ class DashboardController extends GetxController {
 
   void onItemTapped(int index) {
     selectedIndex.value = index;
-    update();
   }
 }

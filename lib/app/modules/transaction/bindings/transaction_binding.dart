@@ -5,7 +5,7 @@ import '../controllers/transaction_controller.dart';
 class TransactionBinding extends Bindings {
   @override
   void dependencies() {
-    Get.lazyPut<TransactionController>(
+    Get.lazyPut<TransactionController> (
       () => TransactionController(),
     );
   }

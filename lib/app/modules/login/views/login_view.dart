@@ -8,6 +8,7 @@ class LoginView extends GetView<LoginController> {
   const LoginView({super.key});
   @override
   Widget build(BuildContext context) {
+    Get.put(LoginController());
     return Obx(() => controller.isLoading.value
         ? const Material(
             child: Center(child: CircularProgressIndicator()),
