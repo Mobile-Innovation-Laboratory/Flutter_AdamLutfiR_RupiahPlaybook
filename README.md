@@ -1,5 +1,7 @@
 # Rupiah Playbook
 
+![Cuplikan Layar 5](https://raw.githubusercontent.com/Mobile-Innovation-Laboratory/Flutter_AdamLutfiR_RupiahPlaybook/main/assets/splash/Splash.png)
+
 ## Daftar Isi
 
 - [Dekripsi Aplikasi](#deskripsi-aplikasi)
