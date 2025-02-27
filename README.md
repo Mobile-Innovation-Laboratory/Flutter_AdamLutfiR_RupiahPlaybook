@@ -65,6 +65,7 @@ Rupiah Playbook merupakan aplikasi manajemen keuangan dengan input dari pengguna
 ![Cuplikan Layar 3](https://raw.githubusercontent.com/Mobile-Innovation-Laboratory/Flutter_AdamLutfiR_RupiahPlaybook/main/assets/screenshots/Cuplikan%20layar%202025-02-27%20225716.png)  
 ![Cuplikan Layar 4](https://raw.githubusercontent.com/Mobile-Innovation-Laboratory/Flutter_AdamLutfiR_RupiahPlaybook/main/assets/screenshots/Cuplikan%20layar%202025-02-27%20225728.png)  
 ![Cuplikan Layar 5](https://raw.githubusercontent.com/Mobile-Innovation-Laboratory/Flutter_AdamLutfiR_RupiahPlaybook/main/assets/screenshots/Cuplikan%20layar%202025-02-27%20232629.png)
+![Cuplikan Layar 6](https://raw.githubusercontent.com/Mobile-Innovation-Laboratory/Flutter_AdamLutfiR_RupiahPlaybook/main/assets/screenshots/Cuplikan%20layar%202025-02-27%20235503.png)
 
 ## Credit
 
