@@ -4,7 +4,7 @@
 
 ## Daftar Isi
 
-- [Dekripsi Aplikasi](#deskripsi-aplikasi)
+- [Deskripsi Aplikasi](#deskripsi-aplikasi)
 - [Fitur](#fitur)
 - [Package](#package)
 - [Screenshots](#screenshots)
