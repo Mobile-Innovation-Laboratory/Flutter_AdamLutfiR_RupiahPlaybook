@@ -12,8 +12,10 @@ class LoginController extends GetxController {
 
   @override
   void onInit() {
-    user.bindStream(_auth.authStateChanges());
     super.onInit();
+    user.bindStream(_auth.authStateChanges());
+    emailController.clear();
+    passwordController.clear();
   }
 
   Future<void> login(String email, String password) async {
@@ -31,6 +33,7 @@ class LoginController extends GetxController {
         await prefs.setString('UID', user.value!.uid);
         Get.snackbar("Success", "Login successful");
         Get.offNamed('/dashboard');
+        isLoading.value = false;
       }
     } on FirebaseAuthException catch (e) {
       isLoading.value = false;
@@ -39,13 +42,11 @@ class LoginController extends GetxController {
       } else if (e.code == 'user-not-found') {
         Get.snackbar("Error", "User not found. Please check your email.");
       } else {
-        Get.snackbar("Error", "An error occurred. Please try again.");
+        Get.snackbar("Error", "Please check your email and password");
       }
     } catch (e) {
       isLoading.value = false;
       Get.snackbar("Error", e.toString());
-    } finally {
-      isLoading.value = false;
     }
   }
 

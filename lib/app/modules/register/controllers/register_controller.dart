@@ -8,6 +8,7 @@ import 'package:get/get.dart';
 class RegisterController extends GetxController {
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
+  final TextEditingController usernameController = TextEditingController();
   final FirebaseAuth _auth = FirebaseAuth.instance;
   var user = Rxn<User>();
   RxBool isLoading = false.obs;
@@ -18,7 +19,13 @@ class RegisterController extends GetxController {
     super.onInit();
   }
 
-  Future<void> register(String email, String password) async {
+  @override
+  void onClose() {
+    emailController.clear();
+    passwordController.clear();
+  }
+
+  Future<void> register(String email, String password, String username) async {
     try {
       if (email == "") {
         Get.snackbar("Error", "Please enter your email");
@@ -28,7 +35,7 @@ class RegisterController extends GetxController {
         isLoading.value = true;
         await _auth.createUserWithEmailAndPassword(
             email: email, password: password);
-        userInit(email);
+        userInit(email,username);
         Get.snackbar("Success",
             "Account created successfully, Please login with your registered account");
         isLoading.value = false;
@@ -54,15 +61,33 @@ class RegisterController extends GetxController {
     }
   }
 
-  Future<void> userInit(String email) async {
+  Future<void> userInit(String email, String username) async {
     final db = FirebaseFirestore.instance;
     await db
         .collection('users')
         .doc(_auth.currentUser?.uid)
         .collection('data')
-        .doc('contact')
+        .doc('email')
         .set({
       email: email,
+    });
+
+    await db
+        .collection('users')
+        .doc(_auth.currentUser?.uid)
+        .collection('data')
+        .doc('balance')
+        .set({
+      'balance': 0,
+    });
+
+        await db
+        .collection('users')
+        .doc(_auth.currentUser?.uid)
+        .collection('data')
+        .doc('username')
+        .set({
+      'username': username,
     });
   }
 }
